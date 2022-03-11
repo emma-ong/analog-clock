@@ -15,7 +15,7 @@
   </head>
   <body>
     <h1>Cat-ch the time?</h1>
-    <p>Try and catch the cat instead!</p>
+    <h3 id="instructions">Try and cat-ch the cat by right-clicking it instead!</h3>
     <div class="analog-clock">
       <svg width="280" height="280">
         <circle id="clock-face" cx="140" cy="140" r="20"/>
@@ -26,7 +26,7 @@
         <line id="s-hand" x1="140" y1="140" x2="140" y2="24"/>
         <line id="s-tail" x1="140" y1="140" x2="140" y2="112"/>
 
-        <image id="cat" href="cat.png" x="112" y="20" onmouseover="catShuffle()" onclick="catShuffle()"/>
+        <image id="cat" href="cat.png" x="112" y="20" onmouseover="catShuffle()" onclick="deleteCat()"/>
         <!-- text coordinates adjusted -->
         <text x="132" y="36">12</text>
         <text x="252" y="152">3</text>
@@ -43,7 +43,7 @@
         <span>:</span>
         <span id="sec">00</span>
         <span id="suffix">--</span>
-
+        
       </div>
     </div>
   </body>

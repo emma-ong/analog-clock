@@ -137,6 +137,27 @@ function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
 }
 
+function deleteCat() {
+  let meow = new Audio("meow.wav")
+  meow.play()
+  let cat = document.getElementById("cat")
+  cat.classList.add("invisible")
+  addCatButton() 
+}
+
+function addCatButton() {
+  let instructions = document.getElementById("instructions")
+  let addCat = document.createElement("div")
+  addCat.innerHTML = "<button class='button-17' role='button' onclick='reload()'>Add cat</button>"
+  instructions.parentNode.replaceChild(addCat, instructions)
+}
+
+function reload(){
+  let cat = document.getElementById("cat")
+  cat.classList.remove("invisible")
+  window.location.reload()
+}
+
 window.onload = clock;
 
 /*
