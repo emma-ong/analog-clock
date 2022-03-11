@@ -4,10 +4,16 @@ body {
   width: 100%;
 }
 .analog-clock {
+  position: relative;
   background-color: cornflowerblue;
   font-size: 100%;
   font-family: 'Mali', cursive, sans-serif;
-  padding: 25%;
+  width: 100%;
+}
+
+#cat{
+  position: absolute;
+  width: 10%;
 }
 
 svg{

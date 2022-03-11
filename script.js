@@ -29,6 +29,7 @@ function clock(){
     setAttr('m-hand', m);
     setAttr('s-hand', s);
     setAttr('s-tail', s+180) // the back tail is 180 degrees the other way (opposite end)
+    setAttr('cat', s);
 
 //3. Display time to users 
     h = d.getHours();
