@@ -29,6 +29,7 @@ function clock(){
     setAttr('m-hand', m);
     setAttr('s-hand', s);
     setAttr('s-tail', s+180) // the back tail is 180 degrees the other way (opposite end)
+    //setAttr('cat', s); original 
     setAttr('cat', s);
 
 //3. Display time to users 
@@ -79,14 +80,80 @@ function setText (id,val){
 };
 
 function catShuffle(){
- 
+  //x-axis remains at 112 always
   let cat = document.getElementById("cat")
-  if(cat.getAttribute("y") === "20"){
-    cat.setAttribute("y", "60")
-  } else {
-    cat.setAttribute("y", "20")
-  }
+  // //make cat move up and down seconds hand 
+  // if(cat.getAttribute("y") === "20"){
+  //   cat.setAttribute("y", "60")
+  // } else {
+  //   cat.setAttribute("y", "20")
+  // }
   
+  //random generated numbers for each separate y-axis (min and max)
+  let randomYSec = getRandomIntInclusive(21, 140)
+  let randomYMin = getRandomIntInclusive(40, 120)
+  let randomYHr = getRandomIntInclusive(70, 120)
+  
+  //redefine angle values 
+  d = new Date; 
+  h = 30 * ( (d.getHours() % 12) + d.getMinutes()/60);
+  m = 6 * d.getMinutes();
+  s = 6 * d.getSeconds();
+
+  let hands = ["h","m","s"]
+  
+  //randomly select from hands array 
+   let randomHand = () => {
+     let hand = hands[getRandomIntInclusive(0,2)]
+     return hand
+   }
+
+   //store selected hand 
+   let hand = randomHand()
+
+  //if hand is h/m/s
+    //change hand that cat lands on via setAttr 
+    // set cat HTML attribute to reflect where on the hand it moves to
+   if(hand === "h"){
+    setAttr("cat", m)
+    cat.setAttribute("y", randomYMin)
+   }
+  
+    if (hand === "m"){
+    setAttr("cat", s)
+    cat.setAttribute("y", randomYSec)
+
+   } 
+   
+   if(hand === "s"){
+    setAttr("cat", h)
+    cat.setAttribute("y", randomYHr)
+   }
+}
+
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
 }
 
 window.onload = clock;
+
+/*
+Seconds hand
+max x - 112
+max y - 140
+min y - 20
+
+mins hand
+max x - 112
+max y - 120 
+min y - 40 
+
+hour hand
+max x - 112
+max y - 120
+min y - 70
+
+*/
+

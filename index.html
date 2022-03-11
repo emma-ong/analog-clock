@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Analog Clock</title>
+    <title>Clock</title>
     <script type="text/javascript" src="script.js"></script>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,7 +14,8 @@
     <link type="text/css" rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <h1>Catch that Cat!</h1>
+    <h1>Cat-ch the time?</h1>
+    <p>Try and catch the cat instead!</p>
     <div class="analog-clock">
       <svg width="280" height="280">
         <circle id="clock-face" cx="140" cy="140" r="20"/>
@@ -24,9 +25,10 @@
         <line id="m-hand" x1="140" y1="140" x2="140" y2="40"/>
         <line id="s-hand" x1="140" y1="140" x2="140" y2="24"/>
         <line id="s-tail" x1="140" y1="140" x2="140" y2="112"/>
+
         <image id="cat" href="cat.png" x="112" y="20" onmouseover="catShuffle()"/>
         <!-- text coordinates adjusted -->
-        <text x="124" y="36">12</text>
+        <text x="132" y="36">12</text>
         <text x="252" y="152">3</text>
         <text x="132" y="260">6</text>
         <text x="14" y="152">9</text>
