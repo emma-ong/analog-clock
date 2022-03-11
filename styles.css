@@ -2,37 +2,48 @@ body {
   margin: 0;
   height: 100%;
   width: 100%;
+  font-family: 'Mali', cursive, sans-serif;
+  text-align: center;
 }
+
+h1 {
+  position: relative;
+  margin-top: 0px;
+  font-size: 300%;
+}
+
 .analog-clock {
   position: relative;
   background-color: cornflowerblue;
   font-size: 100%;
-  font-family: 'Mali', cursive, sans-serif;
   width: 100%;
+  
 }
 
 #cat{
   position: absolute;
+  z-index: 2;
   width: 10%;
 }
 
+
+
 svg{
-  background-color: pink;
+  background-color: cornflowerblue;
   /* svg is inline by default, css to center */
   margin: auto;
   display: block;
 }
 
 #clock-face {
-  stroke: black;
   stroke-width: 2px;
-  fill:white;
+  fill:cornflowerblue;
   
 
 }
 
 #h-hand, #m-hand, #s-hand, #s-tail {
-  stroke: black;
+  stroke: white;
   stroke-linecap: round;
 }
 
@@ -45,9 +56,11 @@ svg{
 }
 
 #s-hand {
-  stroke-width: 1px;
+  
+  stroke-width: 1px;  
 }
 
 .time-text {
   text-align: center;
+  font-size: 200%;
 }

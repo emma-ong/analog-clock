@@ -78,4 +78,15 @@ function setText (id,val){
   document.getElementById(id).innerHTML = val;
 };
 
+function catShuffle(){
+ 
+  let cat = document.getElementById("cat")
+  if(cat.getAttribute("y") === "20"){
+    cat.setAttribute("y", "60")
+  } else {
+    cat.setAttribute("y", "20")
+  }
+  
+}
+
 window.onload = clock;
