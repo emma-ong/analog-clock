@@ -65,7 +65,7 @@ function setAttr(id,val){
     //(+)tive angles = clockwise
     //(-)tive angles = anticlockwise
     //x and y axis at 70
-  let v = `rotate(${val},70,70)`;
+  let v = `rotate(${val},140,140)`;
   document.getElementById(id).setAttribute('transform', v);
 
 };

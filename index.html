@@ -8,23 +8,26 @@
     <script type="text/javascript" src="script.js"></script>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="styles.css">
   </head>
   <body>
     <div class="analog-clock">
-      <svg width="140" height="140">
-        <circle id="clock-face" cx="70" cy="70" r="65"/>
+      <svg width="280" height="280">
+        <circle id="clock-face" cx="140" cy="140" r="20"/>
         <!-- On x & y axis - 1 represents start of line and 2 represents end of line -->
         <!-- h: hour, m: minute, s: second -->
-        <line id="h-hand" x1="70" y1="70" x2="70" y2="38"/>
-        <line id="m-hand" x1="70" y1="70" x2="70" y2="20"/>
-        <line id="s-hand" x1="70" y1="70" x2="70" y2="12"/>
-        <line id="s-tail" x1="70" y1="70" x2="70" y2="56"/>
+        <line id="h-hand" x1="140" y1="140" x2="140" y2="76"/>
+        <line id="m-hand" x1="140" y1="140" x2="140" y2="40"/>
+        <line id="s-hand" x1="140" y1="140" x2="140" y2="24"/>
+        <line id="s-tail" x1="140" y1="140" x2="140" y2="112"/>
         <!-- text coordinates adjusted -->
-        <text x="62" y="18">12</text>
-        <text x="126" y="76">3</text>
-        <text x="66" y="130">6</text>
-        <text x="7" y="76">9</text>
+        <text x="124" y="36">12</text>
+        <text x="252" y="152">3</text>
+        <text x="132" y="260">6</text>
+        <text x="14" y="152">9</text>
 
 
       </svg>

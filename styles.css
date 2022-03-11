@@ -1,22 +1,28 @@
-/* Asterisk is known as CSS' universal selectors (all types of elements on HTML page */
-* {
-
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    font-size: 14px;
-
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+.analog-clock {
+  background-color: cornflowerblue;
+  font-size: 100%;
+  font-family: 'Mali', cursive, sans-serif;
+  padding: 25%;
 }
 
-.analog-clock {
-  width: 140px;
-  height: 140px;
+svg{
+  background-color: pink;
+  /* svg is inline by default, css to center */
+  margin: auto;
+  display: block;
 }
 
 #clock-face {
   stroke: black;
   stroke-width: 2px;
   fill:white;
+  
+
 }
 
 #h-hand, #m-hand, #s-hand, #s-tail {
