@@ -1,8 +1,11 @@
+* {
+  font-family: 'Mali', cursive, sans-serif;
+}
+
 body {
   margin: 0;
   height: 100%;
   width: 100%;
-  font-family: 'Mali', cursive, sans-serif;
   text-align: center;
 }
 
@@ -63,4 +66,18 @@ svg{
 .time-text {
   text-align: center;
   font-size: 200%;
+}
+
+.footer {
+  padding:4%;
+}
+
+.footer-child {
+  display: inline-block;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+p {
+  font-size: 50%;
 }
